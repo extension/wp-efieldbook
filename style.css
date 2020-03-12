@@ -1,0 +1,356 @@
+/*
+Theme Name: DEI Card Gallery
+Theme URI: extension.org
+Author: eXtension
+Author URI: extension.org/
+Template: twentyseventeen
+Description: A theme to display archives as a card gallery
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+:root {
+  /* DEI Competencies - Indigo */
+  --dei_competency-light: #e8eaf6;
+  --dei_competency-medium: #7986cb;
+  --dei_competency-dark: #3f51b5;
+
+  /* DEI Issue Type - Blue */
+  --dei_issue_type-light: #e3f2fd;
+  --dei_issue_type-medium: #64b5f6;
+  --dei_issue_type-dark: #1e88e5;
+
+  /* DEI Activity - Cyan */
+  --dei_activity-light: #e0f7fa;
+  --dei_activity-medium: #4dd0e1;
+  --dei_activity-dark: #0097a7;
+
+  /* DEI Assessment - Teal */
+  --dei_assessment-light: #e0f2f1;
+  --dei_assessment-medium: #80cbc4;
+  --dei_assessment-dark: #00796b;
+
+  /* DEI Accountability - Light Green */
+  --dei_accountability-light: #f1f8e9;
+  --dei_accountability-medium: #9ccc65;
+  --dei_accountability-dark: #689f38;
+
+  /* DEI Tool or Resource - Green */
+  --dei_tool_or_resource-light: #e8f5e9;
+  --dei_tool_or_resource-medium: #66bb6a;
+  --dei_tool_or_resource-dark: #388e3c;
+}
+
+#custom_archive h1 {font-size: 1.4em;}
+.entry-title {font-size:1.25em !important;}
+
+
+
+.wp-custom-header img {
+	opacity:0.7;
+}
+.custom-header-media {
+	background-color:#555;
+}
+.site-branding-text .site-title {
+	text-shadow: 0 2px 6px #000000;
+}
+
+.info-card {
+    /*box-shadow: 2px 2px 6px #999;*/
+    padding: 1em;
+    margin: 10px;
+    min-width: 200px;
+    height: 250px;
+    height: auto;
+    border: 1px solid #ccc;
+    flex: 1;
+    flex: 1 0 calc(33.333% - 20px);
+}
+
+/*Responsive video wrapper*/
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed,
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#gain_attention {
+	 background-color: rgb(240, 240, 240);
+   font-size: 24px;
+   margin-bottom: 10px;
+   display: block;
+   color:white;
+	padding: 0;
+	margin: 0
+}
+#gain_attention > div {
+	width: 67%;
+	max-width: 960px;
+	margin: 10px auto;
+}
+
+@media (max-width: 599px) {
+	#gain_attention > div {
+		width: 100%;
+	}
+}
+
+
+
+
+
+.homepage-card {background: #eee;
+padding: 1em;
+margin: 10px;
+width: 45%;
+float:left;
+}
+.homepage-card h3 a {text-decoration:none; box-shadow:none;}
+.homepage-card h3 a:hover {text-decoration:none; box-shadow:none;}
+.homepage-card ul {padding:0 2em;}
+
+.homepage-card.resource {
+  border:2px solid #80cbc4;
+  background: #e0f2f1;
+  color: #004d40;
+}
+.homepage-card.resource a {
+  color: #004d40;
+  color: #00838f;
+}
+
+.flex-container {
+  clear:both;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-container .card {
+  box-shadow: 2px 2px 6px #999;
+  transition: background-color 0.5s ease;
+  /* background: #f5f5f5; */
+  padding: 1em;
+  margin: 10px;
+  min-width: 200px;
+  height: 250px;
+  height: auto;
+  border: 1px solid #ccc;
+  flex: 1;
+  /* 20px is gutter size -- can set to any value */
+  flex: 1 0 calc(33.333% - 20px);
+  /* max-width: calc(33.333% - 20px); */
+}
+
+.resource-category-overview {font-size:1.2em;}
+.card-tag-header {margin:0 0 .5em; font-size:1.1em; font-weight:600;}
+.resource-tags {margin:0 0; list-style:none; padding-left:0 !important; line-height:1.85em; overflow: hidden;}
+
+.resource-tag span {background: #999; margin-right:10px; color: #fff; padding:2px 6px; font-size:.9em; border-radius: 10px; white-space: nowrap;}
+.resource-tag span a {color:#fff; box-shadow:none !important;}
+.resource-tag span a:hover {color:#fff;}
+.card h2 {font-size:1.2em; font-weight:600; flex: 1;}
+.card p { font-size:.9em;}
+.card:hover {
+  background:#fff;
+  box-shadow: 2px 2px 6px #555;
+}
+.card:hover h2 {
+  font-size:1.2em; color:#006064;
+}
+
+
+.archive-page-title {font-size: 36px;}
+.page-title {font-size: 18px;}
+
+
+.resource-term {font-size:1.4em !important; padding:8px 10px; margin-bottom:1em; color:#fff !important;}
+.resource-term a {color:#fff;}
+
+.taxonomy-archive-header {padding:1em; border-left: 20px solid #fff;}
+.taxonomy-archive-header h1 {font-size: 28px; margin-bottom:0;}
+.taxonomy-archive-header h2 {font-size: 32px; padding:0; margin:0; font-weight: 600;}
+
+.resource-post .post .entry-header {margin-bottom:0 !important;}
+.resource-post .post .entry-title {margin-bottom:0;}
+.resource-post-tags {margin-bottom:1.35em; padding:1em; border-left: 4px solid #fff;}
+.resource-post-tags li {float:left;}
+
+.single-extension_resource .content-area h2 {color: #333; font-size: 30px; font-weight: 500;}
+
+/* Resource Colors
+***************************************************/
+
+/* DEI Competencies */
+.tax-dei_competency .taxonomy-archive-header *,
+.taxonomy-dei_competency .card-tag-header {color: var(--dei_competency-dark);}
+.tax-dei_competency .taxonomy-archive-header,
+.taxonomy-dei_competency {background: var(--dei_competency-light); border-color: var(--dei_competency-medium);}
+.taxonomy-dei_competency .resource-tag span {background: var(--dei_competency-medium);}
+
+/* DEI Issue Type - Blue */
+.tax-dei_issue_type .taxonomy-archive-header *,
+.taxonomy-dei_issue_type .card-tag-header {color: var(--dei_issue_type-dark);}
+.tax-dei_issue_type .taxonomy-archive-header,
+.taxonomy-dei_issue_type {background: var(--dei_issue_type-light); border-color: var(--dei_issue_type-medium);}
+.taxonomy-dei_issue_type .resource-tag span {background: var(--dei_issue_type-medium);}
+
+/* DEI Activity - Cyan */
+.tax-dei_activity .taxonomy-archive-header *,
+.taxonomy-dei_activity .card-tag-header {color: var(--dei_activity-dark);}
+.tax-dei_activity .taxonomy-archive-header,
+.taxonomy-dei_activity {background: var(--dei_activity-light); border-color: var(--dei_activity-medium);}
+.taxonomy-dei_activity .resource-tag span {background: var(--dei_activity-medium);}
+
+/* DEI Assessment - Teal */
+.tax-dei_assessment .taxonomy-archive-header *,
+.taxonomy-dei_assessment .card-tag-header {color: var(--dei_assessment-dark);}
+.tax-dei_assessment .taxonomy-archive-header,
+.taxonomy-dei_assessment {background: var(--dei_assessment-light); border-color: var(--dei_assessment-medium);}
+.taxonomy-dei_assessment .resource-tag span {background: var(--dei_assessment-medium);}
+
+/* DEI Accountability - Light Green */
+.tax-dei_accountability .taxonomy-archive-header *,
+.taxonomy-dei_accountability .card-tag-header {color: var(--dei_accountability-dark);}
+.tax-dei_accountability .taxonomy-archive-header,
+.taxonomy-dei_accountability {background: var(--dei_accountability-light); border-color: var(--dei_accountability-medium);}
+.taxonomy-dei_accountability .resource-tag span {background: var(--dei_accountability-medium);}
+
+/* DEI Tool or Resource - Green */
+.tax-dei_tool_or_resource .taxonomy-archive-header *,
+.taxonomy-dei_tool_or_resource .card-tag-header {color: var(--dei_tool_or_resource-dark);}
+.tax-dei_tool_or_resource .taxonomy-archive-header,
+.taxonomy-dei_tool_or_resource {background: var(--dei_tool_or_resource-light); border-color: var(--dei_tool_or_resource-medium);}
+.taxonomy-dei_tool_or_resource .resource-tag span {background: var(--dei_tool_or_resource-medium);}
+
+
+.card-fact-sheet {background: #f3e5f5 !important; border: 1px solid #e1bee7 !important;}
+.card-fact-sheet h2 {color: #6a1b9a !important;}
+
+
+.homepage-card.resource.card-research_articles_reports_and_datasets {
+  background: #fff3e0;
+  border:2px solid #ffcc80 !important;
+}
+.homepage-card.resource.card-research_articles_reports_and_datasets a {color: #f57c00 !important;}
+.card-research-article-or-report {background: #fff3e0 !important; border: 1px solid #ffcc80 !important;}
+.card-research-article-or-report h2 {color: #e65100 !important;}
+.card-research-article-or-report .resource-tag span {background: #fb8c00;}
+.resource-count.research-article-or-report {color: #f57c00;}
+
+
+
+.entry-content ul {padding-left: 2em;}
+
+.homepage-card.resource.card-resource_repositories_and_websites {
+  background: #e3f2fd;
+  border:2px solid #90caf9 !important;
+}
+.homepage-card.resource.card-resource_repositories_and_websites a {color: #1565c0 !important;}
+
+
+#custom_archive .taxonomy-title {font-size:2em !important; font-weight:500;}
+
+/* posts */
+.post .entry-title {font-size:2em !important;}
+
+.site-content {padding-top:0 !important;}
+.site-content .wrap {padding-top: 2em !important;}
+.entry-header {margin-bottom: 1em !important;}
+
+.clearfix:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+#header-branding-widget-wrapper {
+  background: #fff;
+  position:relative;
+  margin-left:-2em;
+  margin-right:-2em;
+}
+#header-branding-widget {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color:#fff; position:relative;
+  margin: 0 auto;
+}
+.header-branding-item {
+  flex: 0;
+  margin: 0 10px;
+  align-self: center;
+  text-align:center;
+}
+.widget_search {flex: 0 0 90%;}
+.header-branding-item img {max-width:150px !important;}
+
+.navigation-top .wrap {max-width:85%}
+#primary {width: 100%; float:left; max-width:none !important;}
+#secondary {width: 100%; float:right;}
+
+@media screen and (min-width: 30em) {
+  .page-one-column .panel-content .wrap {
+      max-width: 1000px;
+  }
+  .header-branding-item img {max-width:200px !important;}
+}
+
+@media screen and (min-width: 48em) {
+  .content-wrap {max-width: 95%; }
+  .header-branding-item img {max-width:200px !important;}
+}
+@media screen and (min-width: 60em) {
+  .header-branding-item {
+    flex: 1;
+    margin: 10px;
+    align-self: center;
+    text-align:center;
+    min-width:200px;
+  }
+  #header-branding-widget-wrapper {float:right; width: 28%;
+    margin-left: auto; margin-right: auto;
+  }
+  .header-branding-item img {max-width: none !important; width: 90%;}
+  #primary {width: 69% !important;}
+  #secondary {width: 28% !important;}
+}
+@media screen and (min-width: 70em) {
+  .extension_resource-body {width: 50% !important; float: left; }
+  .extension_resource-terms {width: 45% !important; float: right; }
+}
+@media screen and (min-width: 90em) {
+  .content-wrap {max-width: 90%; }
+  #primary {width: 69% !important;}
+  #secondary {width: 28% !important;}
+}
