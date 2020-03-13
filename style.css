@@ -1,5 +1,5 @@
 /*
-Theme Name: DEI Card Gallery
+Theme Name: eFieldbook Base
 Theme URI: extension.org
 Author: eXtension
 Author URI: extension.org/
@@ -11,35 +11,40 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 :root {
-  /* DEI Competencies - Indigo */
-  --dei_competency-light: #e8eaf6;
-  --dei_competency-medium: #7986cb;
-  --dei_competency-dark: #3f51b5;
+  /* eFieldbook Category1 - Indigo */
+  --efieldbook_cat1-light: #e8eaf6;
+  --efieldbook_cat1-medium: #7986cb;
+  --efieldbook_cat1-dark: #3f51b5;
 
-  /* DEI Issue Type - Blue */
-  --dei_issue_type-light: #e3f2fd;
-  --dei_issue_type-medium: #64b5f6;
-  --dei_issue_type-dark: #1e88e5;
+  /* eFieldbook Category2 - Blue */
+  --efieldbook_cat2-light: #e3f2fd;
+  --efieldbook_cat2-medium: #64b5f6;
+  --efieldbook_cat2-dark: #1e88e5;
 
-  /* DEI Activity - Cyan */
-  --dei_activity-light: #e0f7fa;
-  --dei_activity-medium: #4dd0e1;
-  --dei_activity-dark: #0097a7;
+  /* eFieldbook Category3 - Cyan */
+  --efieldbook_cat3-light: #e0f7fa;
+  --efieldbook_cat3-medium: #4dd0e1;
+  --efieldbook_cat3-dark: #0097a7;
 
-  /* DEI Assessment - Teal */
-  --dei_assessment-light: #e0f2f1;
-  --dei_assessment-medium: #80cbc4;
-  --dei_assessment-dark: #00796b;
+  /* eFieldbook Category4 - Teal */
+  --efieldbook_cat4-light: #e0f2f1;
+  --efieldbook_cat4-medium: #80cbc4;
+  --efieldbook_cat4-dark: #00796b;
 
-  /* DEI Accountability - Light Green */
-  --dei_accountability-light: #f1f8e9;
-  --dei_accountability-medium: #9ccc65;
-  --dei_accountability-dark: #689f38;
+  /* eFieldbook Category5 - Light Green */
+  --efieldbook_cat5-light: #f1f8e9;
+  --efieldbook_cat5-medium: #9ccc65;
+  --efieldbook_cat5-dark: #689f38;
 
-  /* DEI Tool or Resource - Green */
-  --dei_tool_or_resource-light: #e8f5e9;
-  --dei_tool_or_resource-medium: #66bb6a;
-  --dei_tool_or_resource-dark: #388e3c;
+  /* eFieldbook Category6 - Green */
+  --efieldbook_cat6-light: #e8f5e9;
+  --efieldbook_cat6-medium: #66bb6a;
+  --efieldbook_cat6-dark: #388e3c;
+
+  /* eFieldbook Category7 - Green */
+  --efieldbook_cat7-light: #e8f5e9;
+  --efieldbook_cat7-medium: #66bb6a;
+  --efieldbook_cat7-dark: #388e3c;
 }
 
 #custom_archive h1 {font-size: 1.4em;}
@@ -55,6 +60,23 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 .site-branding-text .site-title {
 	text-shadow: 0 2px 6px #000000;
+	font-family: "Rubik", sans-serif;
+	font-weight: 700;
+	text-transform: none;
+}
+
+.site-description {
+	text-shadow: 0 2px 6px #000000;
+}
+h2.widget-title {
+	text-transform: none;
+	font-weight: 700;
+}
+
+
+.callout {
+	margin: 0px;
+	width:100%;
 }
 
 .info-card {
@@ -92,20 +114,31 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 #gain_attention {
-	 background-color: rgb(240, 240, 240);
-   font-size: 24px;
-   margin-bottom: 10px;
-   display: block;
-   color:white;
-	padding: 0;
-	margin: 0
+    background-color: rgb(240, 240, 240);
+	line-height: normal;
+    display: block;
+    color:white;
+	margin: 0px;
+	margin-bottom:15px;
+	width: 100%;
+	max-width: none;
 }
 #gain_attention > div {
-	width: 67%;
-	max-width: 960px;
-	margin: 10px auto;
+	width: 80%;
+	max-width: 1100px;
+	margin: 0px auto;
+	padding: 0.5em;
 }
-
+#gain_attention div div h1 {
+	font-weight: 700 !important;
+	/*color: white !important;
+	font-size: 1.2em !important;*/
+}
+#gain_attention div div p {
+	/*color: white !important;
+	font-weight: 400 !important;
+	font-size: 1em !important;*/
+}
 @media (max-width: 599px) {
 	#gain_attention > div {
 		width: 100%;
@@ -113,7 +146,45 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 
+.reflectionArea {
+	background: #f9f9f9;
+	margin: 1.5em 2.5em 1.5em 2em;
+	border: 0; padding: 2em 1.4em 1.5em 1.5em;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 40px;
+	margin-inline-end: 40px;
+}
 
+blockquote
+{
+	color: #666;
+	font-size: 18px;
+	font-size: 1.125rem;
+	font-style: italic;
+	line-height: 1.7;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 40px;
+	margin-inline-end: 40px;
+}
+blockquote cite {
+	display: block;
+	font-style: normal;
+	font-weight: 600;
+	margin-top: 0.5em;
+}
+blockquote {
+	background: #f9f9f9;
+	margin: 1.5em 2.5em 1.5em 2em;
+	border: 0;
+	padding: 2em 1.4em 1.5em 1.5em;
+	quotes: "\201C""\201D";
+}
 
 
 .homepage-card {background: #eee;
@@ -134,6 +205,14 @@ float:left;
 .homepage-card.resource a {
   color: #004d40;
   color: #00838f;
+}
+
+.flex-container {
+	display: flex !important;
+	flex-flow: row wrap !important;
+}
+.flex-container .info-card {
+	min-width: 400px;
 }
 
 .flex-container {
@@ -207,47 +286,54 @@ float:left;
 /* Resource Colors
 ***************************************************/
 
-/* DEI Competencies */
-.tax-dei_competency .taxonomy-archive-header *,
-.taxonomy-dei_competency .card-tag-header {color: var(--dei_competency-dark);}
-.tax-dei_competency .taxonomy-archive-header,
-.taxonomy-dei_competency {background: var(--dei_competency-light); border-color: var(--dei_competency-medium);}
-.taxonomy-dei_competency .resource-tag span {background: var(--dei_competency-medium);}
+/* Urban Extension - Category 1 Indigo */
+.tax-urban_extension .taxonomy-archive-header *,
+.taxonomy-urban-extension .card-tag-header {color: var(--efieldbook_cat1-dark);}
+.tax-urban_extension .taxonomy-archive-header,
+.taxonomy-urban-extension {background: var(--efieldbook_cat1-light); border-color: var(--efieldbook_cat1-medium);}
+.taxonomy-urban-extension .resource-tag span {background: var(--efieldbook_cat1-medium);}
 
-/* DEI Issue Type - Blue */
-.tax-dei_issue_type .taxonomy-archive-header *,
-.taxonomy-dei_issue_type .card-tag-header {color: var(--dei_issue_type-dark);}
-.tax-dei_issue_type .taxonomy-archive-header,
-.taxonomy-dei_issue_type {background: var(--dei_issue_type-light); border-color: var(--dei_issue_type-medium);}
-.taxonomy-dei_issue_type .resource-tag span {background: var(--dei_issue_type-medium);}
+/* Positioning - Category 2 Blue */
+.tax-positioning .taxonomy-archive-header *,
+.taxonomy-positioning .card-tag-header {color: var(--efieldbook_cat2-dark);}
+.tax-positioning .taxonomy-archive-header,
+.taxonomy-positioning {background: var(--efieldbook_cat2-light); border-color: var(--efieldbook_cat2-medium);}
+.taxonomy-positioning .resource-tag span {background: var(--efieldbook_cat2-medium);}
 
-/* DEI Activity - Cyan */
-.tax-dei_activity .taxonomy-archive-header *,
-.taxonomy-dei_activity .card-tag-header {color: var(--dei_activity-dark);}
-.tax-dei_activity .taxonomy-archive-header,
-.taxonomy-dei_activity {background: var(--dei_activity-light); border-color: var(--dei_activity-medium);}
-.taxonomy-dei_activity .resource-tag span {background: var(--dei_activity-medium);}
+/* Programming - Category 3 Cyan */
+.tax-programming .taxonomy-archive-header *,
+.taxonomy-programming .card-tag-header {color: var(--efieldbook_cat3-dark);}
+.tax-programming .taxonomy-archive-header,
+.taxonomy-programming {background: var(--efieldbook_cat3-light); border-color: var(--efieldbook_cat3-medium);}
+.taxonomy-programming .resource-tag span {background: var(--efieldbook_cat3-medium);}
 
-/* DEI Assessment - Teal */
-.tax-dei_assessment .taxonomy-archive-header *,
-.taxonomy-dei_assessment .card-tag-header {color: var(--dei_assessment-dark);}
-.tax-dei_assessment .taxonomy-archive-header,
-.taxonomy-dei_assessment {background: var(--dei_assessment-light); border-color: var(--dei_assessment-medium);}
-.taxonomy-dei_assessment .resource-tag span {background: var(--dei_assessment-medium);}
+/* Personnel - Category 4 Teal */
+.tax-personnel .taxonomy-archive-header *,
+.taxonomy-personnel .card-tag-header {color: var(--efieldbook_cat4-dark);}
+.tax-personnel .taxonomy-archive-header,
+.taxonomy-personnel {background: var(--efieldbook_cat4-light); border-color: var(--efieldbook_cat4-medium);}
+.taxonomy-personnel .resource-tag span {background: var(--efieldbook_cat4-medium);}
 
-/* DEI Accountability - Light Green */
-.tax-dei_accountability .taxonomy-archive-header *,
-.taxonomy-dei_accountability .card-tag-header {color: var(--dei_accountability-dark);}
-.tax-dei_accountability .taxonomy-archive-header,
-.taxonomy-dei_accountability {background: var(--dei_accountability-light); border-color: var(--dei_accountability-medium);}
-.taxonomy-dei_accountability .resource-tag span {background: var(--dei_accountability-medium);}
+/* Partnerships - Category 5 Light Green */
+.tax-partnerships .taxonomy-archive-header *,
+.taxonomy-partnerships .card-tag-header {color: var(--efieldbook_cat5-dark);}
+.tax-partnerships .taxonomy-archive-header,
+.taxonomy-partnerships {background: var(--efieldbook_cat5-light); border-color: var(--efieldbook_cat5-medium);}
+.taxonomy-partnerships .resource-tag span {background: var(--efieldbook_cat5-medium);}
 
-/* DEI Tool or Resource - Green */
-.tax-dei_tool_or_resource .taxonomy-archive-header *,
-.taxonomy-dei_tool_or_resource .card-tag-header {color: var(--dei_tool_or_resource-dark);}
-.tax-dei_tool_or_resource .taxonomy-archive-header,
-.taxonomy-dei_tool_or_resource {background: var(--dei_tool_or_resource-light); border-color: var(--dei_tool_or_resource-medium);}
-.taxonomy-dei_tool_or_resource .resource-tag span {background: var(--dei_tool_or_resource-medium);}
+/* Collaborator Types - Category 6 Green */
+.tax-collaborator_types .taxonomy-archive-header *,
+.taxonomy-collaborator-types .card-tag-header {color: var(--efieldbook_cat6-dark);}
+.tax-collaborator_types .taxonomy-archive-header,
+.taxonomy-collaborator-types {background: var(--efieldbook_cat6-light); border-color: var(--efieldbook_cat6-medium);}
+.taxonomy-collaborator-types .resource-tag span {background: var(--efieldbook_cat6-medium);}
+
+/* Resources - Category 7 Green */
+.tax-resources .taxonomy-archive-header *,
+.taxonomy-resources .card-tag-header {color: var(--efieldbook_cat6-dark);}
+.tax-resources .taxonomy-archive-header,
+.taxonomy-resources {background: var(--efieldbook_cat6-light); border-color: var(--efieldbook_cat6-medium);}
+.taxonomy-resources .resource-tag span {background: var(--efieldbook_cat6-medium);}
 
 
 .card-fact-sheet {background: #f3e5f5 !important; border: 1px solid #e1bee7 !important;}
