@@ -12,17 +12,39 @@
 
 get_header(); ?>
 
+<?php
+
+$tax = get_taxonomy( get_queried_object()->taxonomy );
+$term = get_queried_object();
+// echo $term->name;
+
+$args = array(
+  'public'   => true,
+  '_builtin' => false
+);
+$pods_colors = array();
+$i = 1;
+$output = 'names'; // or objects
+$operator = 'and'; // 'and' or 'or'
+$taxonomies = get_taxonomies( $args, $output, $operator );
+if ( $taxonomies ) {
+    foreach ( $taxonomies  as $taxonomy ) {
+				$pods_colors[$taxonomy] = $i;
+				$i++;
+				// echo '<p/>CSS class for ' . $taxonomy .': ' . $pods_colors[$taxonomy] . '</p>';
+    }
+}
+?>
 <!-- child / taxonomy.php -->
-<div id="taxonomy" class="wrap content-wrap">
+<div id="taxonomy" class="wrap content-wrap tax-archive-taxonomy<?php echo $GLOBALS[pods_colors][$tax->name]; ?>">
+
 
 	<?php if ( have_posts() ) : ?>
 		<header class="page-header">
       <div class="taxonomy-archive-header">
 
 			<?php
-      $tax = get_taxonomy( get_queried_object()->taxonomy );
-      $term = get_queried_object();
-      // echo $term->name;
+
 
       $parents = get_ancestors($term->term_id, 'md_addiction');
       $parents = array_reverse($parents);

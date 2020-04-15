@@ -1,32 +1,61 @@
 <?php
 /**
- * Template part for displaying posts
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.2
- */
-
-$post_activities_term_list = wp_get_post_terms($post->ID, 'dei_activity', array("fields" => "all"));
-
+* Template part for displaying posts
+*
+* @link https://codex.wordpress.org/Template_Hierarchy
+*
+* @package WordPress
+* @subpackage Twenty_Seventeen
+* @since 1.0
+* @version 1.2
+*/
 ?>
-  <div id="post-<?php the_ID(); ?>" class="card resource-<?php echo $term_list[0]->slug; ?>">
+<div id="post-<?php the_ID(); ?>" class="card resource-<?php echo $term_list[0]->slug; ?>">
   <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-
-    <h2><?php the_title(); ?></h2></a>
-    <p><?php echo excerpt(24); ?></p>
+    <h2><?php the_title(); ?></h2>
+  </a>
+  <p><?php echo excerpt(24); ?></p>
     <?php
-
-      if ($post_activities_term_list) {
-        echo '<div class="resource-post-tags taxonomy-dei_activity clearfix"><h3 class="card-tag-header">Activities</h3>';
-        echo '<ul class="resource-tags">';
-        foreach($post_activities_term_list as $tag) {
-          echo '<li class="resource-tag"><span><a href="' . get_term_link($tag) . '">' . $tag->name . '</a></span></li>';
-        }
-        echo '</ul></div>';
+    $tax = get_taxonomy( get_queried_object()->taxonomy );
+    $term = get_queried_object();
+    $id = get_the_ID();
+    $args = array(
+    'public'   => true,
+    '_builtin' => false
+    );
+    $pods_colors = array();
+    $i = 1;
+    $output = 'names'; // or objects
+    $operator = 'and'; // 'and' or 'or'
+    $taxonomies = get_taxonomies( $args, $output, $operator );
+    // map the taxonomy name to a numeric value
+    if ( $taxonomies ) {
+      foreach ( $taxonomies  as $taxonomy ) {
+          $pods_colors[$taxonomy] = $i;
+          $i++;
       }
+    }
+    foreach ($taxonomies as $taxonomy) {
+      $term_list = wp_get_post_terms($post->ID, $taxonomy, array("fields" => "all"));
+      if ((!empty($term_list)) && (!is_wp_error($term_list))) {
+        $myArray = [];
+        echo '<div class="taxonomy-taxonomy' . $pods_colors[$taxonomy] . ' resource-post-tags taxonomy-response_type clearfix"><h3 class="card-tag-header">' . $taxonomy . ':</h3>';
+        echo '<ul class="resource-tags">';
+        foreach($term_list as $term) {
+          $parents = get_ancestors($term->term_id, $taxonomy );
+          $parents = array_reverse($parents);
+          array_push($parents, $term->term_id);
+          $myArray = array_merge($myArray, $parents);
+          $myArray = array_unique($myArray);
+        }
+        array_unique($myArray);
+        foreach($myArray as $parent) {
+          $foo = get_term( $parent);
+          echo '<li class="resource-tag"><span><a href="' . get_term_link($foo) . '">' . $foo->name . '</a></span></li>';
+        }
+        echo "</ul>";
+        echo '</div>';
+      }
+    }
     ?>
-  </div>
+</div>
