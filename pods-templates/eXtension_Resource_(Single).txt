@@ -1,0 +1,72 @@
+<div class="extension_resource-body">
+{@post_content}
+
+[if location]<p><strong>URL</strong>: <a href="{@location}" target="_blank" rel="noopener noreferrer">{@location}</a></p>[/if]
+[if program_duration]<p><strong>Program Duration</strong>: {@program_duration}</p>[/if]
+[if target_audience]
+<?php
+
+$id = get_the_ID();
+  $post_target_audience_term_list = wp_get_post_terms($id, 'target_audience', array("fields" => "all"));
+  if ($post_target_audience_term_list) {
+
+    echo '<div class="resource-post-tags clearfix"><h3 class="card-tag-header">Target Audiences</h3>';
+    echo '<ul class="resource-tags">';
+    foreach($post_target_audience_term_list as $tag) {
+      echo '<li class="resource-tag"><span><a href="' . get_term_link($tag) . '">' . $tag->name . '</a></span></li>';
+    }
+    echo '</ul></div>';
+  }
+  ?>
+[/if]
+[if research_support]<p><strong>Research Support</strong>: {@research_support}</p>[/if]
+[if program_costs]<p><strong>Program Costs</strong>: {@program_costs}</p>[/if]
+[if contact_info]<p><strong>Contact Info</strong>: {@contact_info}</p>[/if]
+[if links]<p><strong>Program Links</strong>: {@links}</p>[/if]
+
+
+</div><!-- .extension_resource-body -->
+<div class="extension_resource-terms">
+
+<?php
+  $tax = get_taxonomy( get_queried_object()->taxonomy );
+  $term = get_queried_object();
+  $id = get_the_ID();
+
+  $args = array(
+    'public'   => true,
+    '_builtin' => false
+  );
+  $pods_colors = array();
+  $i = 1;
+  $output = 'names'; // or objects
+  $operator = 'and'; // 'and' or 'or'
+  $taxonomies = get_taxonomies( $args, $output, $operator );
+
+  // map the taxonomy name to a numeric value
+  if ( $taxonomies ) {
+      foreach ( $taxonomies  as $taxonomy ) {
+  				$pods_colors[$taxonomy] = $i;
+  				$i++;
+      }
+  }
+
+  // print out the terms for each taxonomy
+  if ( $taxonomies ) {
+      foreach ( $taxonomies  as $taxonomy ) {
+  				$term_list = wp_get_post_terms($id, $taxonomy);
+
+          if ((!empty($term_list)) && (!is_wp_error($term_list))) {
+            echo '<div class="resource-post-tags taxonomy-taxonomy' . $pods_colors[$taxonomy] . ' clearfix"><h3 class="card-tag-header">' . $taxonomy .': </h3>';
+            echo '<ul class="resource-tags">';
+            foreach($term_list as $tag) {
+              echo '<li class="resource-tag"><span><a href="' . get_term_link($tag) . '">' . $tag->name . '</a></span></li>';
+            }
+            echo '</ul></div>';
+          }
+
+      }
+  }
+?>
+
+</div><!-- .extension_resource-terms -->
