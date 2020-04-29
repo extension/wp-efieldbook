@@ -11,41 +11,67 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 :root {
-  /* eFieldbook Taxonomy1 - Indigo */
-  --taxonomy1-light: #e8eaf6;
-  --taxonomy1-medium: #7986cb;
-  --taxonomy1-dark: #3f51b5;
+  /* Indigo */
+  --taxonomy1-light:    #e8eaf6;
+  --taxonomy1-medium:   #7986cb;
+  --taxonomy1-dark:     #3f51b5;
 
-  /* eFieldbook Taxonomy2 - Blue */
-  --taxonomy2-light: #e3f2fd;
-  --taxonomy2-medium: #64b5f6;
-  --taxonomy2-dark: #1e88e5;
+  /* Blue */
+  --taxonomy2-light:    #e3f2fd;
+  --taxonomy2-medium:   #64b5f6;
+  --taxonomy2-dark:     #1e88e5;
 
-  /* eFieldbook Taxonomy3 - Cyan */
-  --taxonomy3-light: #e0f7fa;
-  --taxonomy3-medium: #4dd0e1;
-  --taxonomy3-dark: #0097a7;
+  /* Cyan */
+  --taxonomy3-light:    #e0f7fa;
+  --taxonomy3-medium:   #4dd0e1;
+  --taxonomy3-dark:     #0097a7;
 
-  /* eFieldbook Taxonomy4 - Teal */
-  --taxonomy4-light: #e0f2f1;
-  --taxonomy4-medium: #80cbc4;
-  --taxonomy4-dark: #00796b;
+  /* Teal */
+  --taxonomy4-light:    #e0f2f1;
+  --taxonomy4-medium:   #80cbc4;
+  --taxonomy4-dark:     #00796b;
 
-  /* eFieldbook Taxonomy5 - Light Green */
-  --taxonomy5-light: #f1f8e9;
-  --taxonomy5-medium: #9ccc65;
-  --taxonomy5-dark: #689f38;
+  /* Light Green */
+  --taxonomy5-light:    #f1f8e9;
+  --taxonomy5-medium:   #9ccc65;
+  --taxonomy5-dark:     #689f38;
 
-  /* eFieldbook Taxonomy6 - Green */
-  --taxonomy6-light: #e8f5e9;
-  --taxonomy6-medium: #66bb6a;
-  --taxonomy6-dark: #388e3c;
+  /* Green */
+  --taxonomy6-light:    #e8f5e9;
+  --taxonomy6-medium:   #66bb6a;
+  --taxonomy6-dark:     #388e3c;
 
-  /* eFieldbook Taxonomy7 - Green */
-  --taxonomy7-light: #e8f5e9;
-  --taxonomy7-medium: #66bb6a;
-  --taxonomy7-dark: #388e3c;
+  /* Chartreuse */
+  --taxonomy8-light:    #ffe5d9;
+  --taxonomy8-medium:   #f77e48;
+  --taxonomy8-dark:     #c5643a;
+
+  /* Orange  */
+  --taxonomy7-light:    #f7f7e0;
+  --taxonomy7-medium:   #c8c500;
+  --taxonomy7-dark:     #898700;
+
+  /* Magenta */
+  --taxonomy9-light:    #ffe1f3;
+  --taxonomy9-medium:   #d662b9;
+  --taxonomy9-dark:     #b44782;
+
+  /* Purple */
+  --taxonomy10-light:   #ddd2e7;
+  --taxonomy10-medium:  #8d55bd;
+  --taxonomy10-dark:    #5f258e;
+
+  /* Brick */
+  --taxonomy11-light:   #ebd6d7;
+  --taxonomy11-medium:  #a85355;
+  --taxonomy11-dark:    #933f42;
+
+  /* Gray */
+  --taxonomy12-light:   #e9e9e9;
+  --taxonomy12-medium:  #9e9e9e;
+  --taxonomy12-dark:    #555;
 }
+
 
 #custom_archive h1 {font-size: 1.4em;}
 .entry-title {font-size:1.25em !important;}
@@ -284,56 +310,104 @@ float:left;
 .single-extension_resource .content-area h2 {color: #333; font-size: 30px; font-weight: 500;}
 
 /* Resource Colors
-***************************************************/
+*******************************************************************************/
 
-/* Taxonomy 1 - Indigo */
+/* Taxonomy 1
+------------------------------------------------------------------------------*/
 .tax-archive-taxonomy1 .taxonomy-archive-header *,
 .taxonomy-taxonomy1 .card-tag-header {color: var(--taxonomy1-dark);}
 .tax-archive-taxonomy1 .taxonomy-archive-header,
 .taxonomy-taxonomy1 {background: var(--taxonomy1-light); border-color: var(--taxonomy1-medium);}
 .taxonomy-taxonomy1 .resource-tag span {background: var(--taxonomy1-medium);}
 
-/* Taxonomy 2 - Blue */
+/* Taxonomy 2
+------------------------------------------------------------------------------*/
 .tax-archive-taxonomy2 .taxonomy-archive-header *,
 .taxonomy-taxonomy2 .card-tag-header {color: var(--taxonomy2-dark);}
 .tax-archive-taxonomy2 .taxonomy-archive-header,
 .taxonomy-taxonomy2 {background: var(--taxonomy2-light); border-color: var(--taxonomy2-medium);}
 .taxonomy-taxonomy2 .resource-tag span {background: var(--taxonomy2-medium);}
 
-/* Taxonomy 3 - Cyan */
+/* Taxonomy 3
+------------------------------------------------------------------------------*/
 .tax-archive-taxonomy3 .taxonomy-archive-header *,
 .taxonomy-taxonomy3 .card-tag-header {color: var(--taxonomy3-dark);}
 .tax-archive-taxonomy3 .taxonomy-archive-header,
 .taxonomy-taxonomy3 {background: var(--taxonomy3-light); border-color: var(--taxonomy3-medium);}
 .taxonomy-taxonomy3 .resource-tag span {background: var(--taxonomy3-medium);}
 
-/* Taxonomy 4 - Teal */
+/* Taxonomy 4
+------------------------------------------------------------------------------*/
 .tax-archive-taxonomy4 .taxonomy-archive-header *,
 .taxonomy-taxonomy4 .card-tag-header {color: var(--taxonomy4-dark);}
 .tax-archive-taxonomy4 .taxonomy-archive-header,
 .taxonomy-taxonomy4 {background: var(--taxonomy4-light); border-color: var(--taxonomy4-medium);}
 .taxonomy-taxonomy4 .resource-tag span {background: var(--taxonomy4-medium);}
 
-/* Taxonomy 5 - Light Green */
+/* Taxonomy 5
+------------------------------------------------------------------------------*/
 .tax-archive-taxonomy5 .taxonomy-archive-header *,
 .taxonomy-taxonomy5 .card-tag-header {color: var(--taxonomy5-dark);}
 .tax-archive-taxonomy5 .taxonomy-archive-header,
 .taxonomy-taxonomy5 {background: var(--taxonomy5-light); border-color: var(--taxonomy5-medium);}
 .taxonomy-taxonomy5 .resource-tag span {background: var(--taxonomy5-medium);}
 
-/* Taxonomy 6 - Green */
+/* Taxonomy 6
+------------------------------------------------------------------------------*/
 .tax-archive-taxonomy6 .taxonomy-archive-header *,
 .taxonomy-taxonomy6 .card-tag-header {color: var(--taxonomy6-dark);}
 .tax-archive-taxonomy6 .taxonomy-archive-header,
 .taxonomy-taxonomy6 {background: var(--taxonomy6-light); border-color: var(--taxonomy6-medium);}
 .taxonomy-taxonomy6 .resource-tag span {background: var(--taxonomy6-medium);}
 
-/* Taxonomy 7 - Green */
+/* Taxonomy 7
+------------------------------------------------------------------------------*/
 .tax-archive-taxonomy7 .taxonomy-archive-header *,
-.taxonomy-taxonomy7 .card-tag-header {color: var(--taxonomy6-dark);}
+.taxonomy-taxonomy7 .card-tag-header {color: var(--taxonomy7-dark);}
 .tax-archive-taxonomy7 .taxonomy-archive-header,
-.taxonomy-taxonomy7 {background: var(--taxonomy6-light); border-color: var(--taxonomy6-medium);}
-.taxonomy-taxonomy7 .resource-tag span {background: var(--taxonomy6-medium);}
+.taxonomy-taxonomy7 {background: var(--taxonomy7-light); border-color: var(--taxonomy7-medium);}
+.taxonomy-taxonomy7 .resource-tag span {background: var(--taxonomy7-medium);}
+
+/* Taxonomy 8
+------------------------------------------------------------------------------*/
+.tax-archive-taxonomy8 .taxonomy-archive-header *,
+.taxonomy-taxonomy8 .card-tag-header {color: var(--taxonomy8-dark);}
+.tax-archive-taxonomy8 .taxonomy-archive-header,
+.taxonomy-taxonomy8 {background: var(--taxonomy8-light); border-color: var(--taxonomy8-medium);}
+.taxonomy-taxonomy8 .resource-tag span {background: var(--taxonomy8-medium);}
+
+/* Taxonomy 9
+------------------------------------------------------------------------------*/
+.tax-archive-taxonomy9 .taxonomy-archive-header *,
+.taxonomy-taxonomy9 .card-tag-header {color: var(--taxonomy9-dark);}
+.tax-archive-taxonomy9 .taxonomy-archive-header,
+.taxonomy-taxonomy9 {background: var(--taxonomy9-light); border-color: var(--taxonomy9-medium);}
+.taxonomy-taxonomy9 .resource-tag span {background: var(--taxonomy9-medium);}
+
+/* Taxonomy 10
+------------------------------------------------------------------------------*/
+.tax-archive-taxonomy10 .taxonomy-archive-header *,
+.taxonomy-taxonomy10 .card-tag-header {color: var(--taxonomy10-dark);}
+.tax-archive-taxonomy10 .taxonomy-archive-header,
+.taxonomy-taxonomy10 {background: var(--taxonomy10-light); border-color: var(--taxonomy10-medium);}
+.taxonomy-taxonomy10 .resource-tag span {background: var(--taxonomy10-medium);}
+
+/* Taxonomy 11
+------------------------------------------------------------------------------*/
+.tax-archive-taxonomy11 .taxonomy-archive-header *,
+.taxonomy-taxonomy11 .card-tag-header {color: var(--taxonomy11-dark);}
+.tax-archive-taxonomy11 .taxonomy-archive-header,
+.taxonomy-taxonomy11 {background: var(--taxonomy11-light); border-color: var(--taxonomy11-medium);}
+.taxonomy-taxonomy11 .resource-tag span {background: var(--taxonomy11-medium);}
+
+/* Taxonomy 12
+------------------------------------------------------------------------------*/
+.tax-archive-taxonomy12 .taxonomy-archive-header *,
+.taxonomy-taxonomy12 .card-tag-header {color: var(--taxonomy12-dark);}
+.tax-archive-taxonomy12 .taxonomy-archive-header,
+.taxonomy-taxonomy12 {background: var(--taxonomy12-light); border-color: var(--taxonomy12-medium);}
+.taxonomy-taxonomy12 .resource-tag span {background: var(--taxonomy12-medium);}
+
 
 
 .card-fact-sheet {background: #f3e5f5 !important; border: 1px solid #e1bee7 !important;}
