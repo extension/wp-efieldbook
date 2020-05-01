@@ -25,21 +25,24 @@
     );
     $pods_colors = array();
     $i = 1;
-    $output = 'names'; // or objects
+    $output = 'objects'; // or objects
     $operator = 'and'; // 'and' or 'or'
     $taxonomies = get_taxonomies( $args, $output, $operator );
     // map the taxonomy name to a numeric value
     if ( $taxonomies ) {
       foreach ( $taxonomies  as $taxonomy ) {
-          $pods_colors[$taxonomy] = $i;
+          $pods_colors[$taxonomy->name] = $i;
           $i++;
       }
     }
+    $n = 1;
     foreach ($taxonomies as $taxonomy) {
-      $term_list = wp_get_post_terms($post->ID, $taxonomy, array("fields" => "all"));
+      if($n > 2)
+        break;
+      $term_list = wp_get_post_terms($post->ID, $taxonomy->name, array("fields" => "all"));
       if ((!empty($term_list)) && (!is_wp_error($term_list))) {
         $myArray = [];
-        echo '<div class="taxonomy-taxonomy' . $pods_colors[$taxonomy] . ' resource-post-tags taxonomy-response_type clearfix"><h3 class="card-tag-header">' . $taxonomy . ':</h3>';
+        echo '<div class="taxonomy-taxonomy taxonomy-taxonomy' . $pods_colors[$taxonomy->name] . ' resource-post-tags clearfix"><h3 class="card-tag-header">' . $taxonomy->labels->singular_name . ':</h3>';
         echo '<ul class="resource-tags">';
         foreach($term_list as $term) {
           $parents = get_ancestors($term->term_id, $taxonomy );
@@ -55,6 +58,7 @@
         }
         echo "</ul>";
         echo '</div>';
+        $n++;
       }
     }
     ?>
