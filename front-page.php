@@ -27,6 +27,7 @@ get_header(); ?>
   <?php get_sidebar( 'header-branding' ); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
+    <!-- eFieldbook Base child / front-page.php -->
 
 		<?php // Show the selected frontpage content.
 		if ( have_posts() ) :

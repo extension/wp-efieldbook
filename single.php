@@ -16,7 +16,7 @@ get_header(); ?>
   <?php get_sidebar( 'header-branding' ); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+<!-- eFieldbook Base child / single.php -->
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();

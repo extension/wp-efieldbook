@@ -30,7 +30,7 @@ get_header(); ?>
   <?php get_sidebar( 'header-branding' ); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-<!-- child / page.php -->
+<!-- eFieldbook Base child / page.php -->
 			<?php
 			while ( have_posts() ) : the_post();
 

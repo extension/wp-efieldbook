@@ -68,6 +68,7 @@ if ( $taxonomies ) {
 <?php get_sidebar( 'header-branding' ); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+      <!-- eFieldbook Base child / taxonomy.php -->
 
     <div class="flex-container">
 		<?php

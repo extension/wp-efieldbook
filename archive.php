@@ -25,7 +25,7 @@ get_header(); ?>
   <?php get_sidebar( 'header-branding' ); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-<!-- child / archive.php -->
+<!-- eFieldbook Base child / archive.php -->
     <div class="flex-container">
 		<?php
 		if ( have_posts() ) : ?>

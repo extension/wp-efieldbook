@@ -24,6 +24,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<!-- eFieldbook Base child / search.php -->
       <!-- The template for displaying search results pages -->
       <div class="flex-container">
 
